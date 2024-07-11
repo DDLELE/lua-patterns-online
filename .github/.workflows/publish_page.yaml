@@ -2,14 +2,14 @@ name: '[CD.DeployPages]'
 
 on:
   push:
-      - '*'
+    branches:
+    - '*'
 
 jobs:
   publish:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    working-directory: 
     steps:
       - name: Check out
         uses: actions/checkout@v4
@@ -19,7 +19,8 @@ jobs:
       - name: Generate your content
         run: yarn
       
-      - run: yarn build
+      - name: build
+        run: yarn build
 
       - name: publish to pages
         uses: rayluo/github-pages-overwriter@v1.3
