@@ -1,2 +1,16 @@
-<h1>Lua Patterns online</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  const methods = [
+    "gsub",
+    "gmatch"
+  ]
+</script>
+
+
+<ul>
+  {#each methods as luaFunc}
+  <li><a href="/{luaFunc}">
+    <h2>
+      {luaFunc}
+    </h2></a></li>
+  {/each}
+</ul>
