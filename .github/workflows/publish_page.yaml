@@ -15,12 +15,12 @@ jobs:
       - name: Check out
         uses: actions/checkout@v4
 
-      - run: cd app
-
       - name: Generate your content
+        working-directory: app
         run: yarn
       
       - name: build
+        working-directory: app
         run: yarn build
 
       - name: publish to pages
