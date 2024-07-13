@@ -8,7 +8,7 @@
 
 <ul>
   {#each methods as luaFunc}
-  <li><a href="/{luaFunc}">
+  <li><a href="{luaFunc}">
     <h2>
       {luaFunc}
     </h2></a></li>
