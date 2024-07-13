@@ -28,4 +28,4 @@ jobs:
 
         with:
           source-directory: pages
-          target-branch: gh-pages
+          target-branch: pages
